@@ -6,10 +6,7 @@ os:
   - osx
 
 before_install:
-  - if [[ $TRAVIS_OS_NAME = "osx" ]]; then
-#      brew install lcms2;
-      pwd
-    elif [[ $TRAVIS_OS_NAME = "linux" ]]; then
+  - if [[ $TRAVIS_OS_NAME = "linux" ]]; then
       echo "deb-src http://archive.ubuntu.com/ubuntu xenial main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list;
       sudo apt-get update -q;
       sudo apt-get build-dep -y libpng16-16;
