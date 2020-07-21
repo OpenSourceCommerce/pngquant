@@ -7,7 +7,7 @@ os:
 
 before_install:
   - if [[ $TRAVIS_OS_NAME = "osx" ]]; then
-      brew install -q lcms2;
+      brew install lcms2;
     elif [[ $TRAVIS_OS_NAME = "linux" ]]; then
       echo "deb-src http://archive.ubuntu.com/ubuntu xenial main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list;
       sudo apt-get update -q;
