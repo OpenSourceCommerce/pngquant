@@ -31,6 +31,6 @@ deploy:
   file_glob: true
   file:
     - $TRAVIS_BUILD_DIR/linux-pngquant
-    - $HOME/jpeg-archive/osx-pngquant
+    - $TRAVIS_BUILD_DIR/osx-pngquant
   on:
     tags: true
