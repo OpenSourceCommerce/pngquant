@@ -19,3 +19,5 @@ script:
   - ./configure --with-lcms2
   - make
   - make test
+  - make install
+  - ls -la /usr/local/bin
