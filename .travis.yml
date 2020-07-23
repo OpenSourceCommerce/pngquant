@@ -1,4 +1,5 @@
 language: c
+cache: cargo
 sudo: required
 
 os:
@@ -18,7 +19,8 @@ script:
   - make
   - make test
   - sudo make install
-  - cp /usr/local/bin/pngquant $TRAVIS_BUILD_DIR/$TRAVIS_OS_NAME-pngquant
+  - cargo build --release --features=sse,lcms2-static,openmp-static
+  - cp ./target/release/pngquant $TRAVIS_BUILD_DIR/$TRAVIS_OS_NAME-pngquant
 
 deploy:
   provider: releases
