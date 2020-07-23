@@ -15,10 +15,10 @@ before_install:
     fi
 
 script:
-  - ./configure --with-lcms2
-  - make
-  - make test
-  - sudo make install
+#  - ./configure --with-lcms2
+#  - make
+#  - make test
+#  - sudo make install
   - cargo build --release --features=sse,lcms2-static,openmp-static
   - cp ./target/release/pngquant $TRAVIS_BUILD_DIR/$TRAVIS_OS_NAME-pngquant
 
