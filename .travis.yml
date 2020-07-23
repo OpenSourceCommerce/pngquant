@@ -1,4 +1,4 @@
-language: c
+language: rust
 cache: cargo
 sudo: required
 
